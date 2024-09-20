@@ -1,0 +1,49 @@
+<html></html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Java script</title>
+<form>
+    Nhập số a: <input type="text" id="a" value=""/> <br/>
+    Nhập số b: <input type="text" id="b" value=""/> <br/>
+    <span id="result"></span> <br/>
+    <input type="button" id="giaiBtn" value="Tìm nghiệm"/>
+</form>
+ 
+<script>
+    var button = document.getElementById('giaiBtn');
+    giaiBtn.onclick = function(){
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+ 
+        if (a == "" || b == ""){
+            alert("Vui lòng nhập dữ liệu");
+        }
+        else {
+            a = Number(a);
+            b = Number(b);
+            giai_pt_bac_nhat(a, b);
+        }
+    };
+ 
+    function giai_pt_bac_nhat(a, b)
+    {
+        if (a == 0 && b == 0){
+            alert('Phương trình vô số nghiệm');
+        }
+        else if (a != 0 && b == 0){
+            alert('Phương trình có nghiệm x = 0');
+        }
+        else if (a == 0 && b != 0){
+            alert("Phương trình vô nghiệm");
+        }
+        else {
+            alert('Phương trình có nghiệm x = ' + (-b/a));
+        }
+    }
+</script>
+<a href="cong.html">Phép Cộng</a><br>
+<a href="java_script.htm">Phép Nhân</a><br>
+<a href="chia.html">Phép Chia</a><br>
+<a href="tru.html">Phép Trừ</a>
